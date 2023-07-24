@@ -6,7 +6,7 @@ namespace HotelListing.API.Data
 {
     public class Hotel
     {
-        
+        [Key]
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -15,8 +15,8 @@ namespace HotelListing.API.Data
 
         public double Rating { get; set; }
 
-        [ForeignKey(nameof(CountryID))]
-        public int CountryID { get; set; }
+        [ForeignKey(nameof(CountryId))]
+        public int CountryId { get; set; }
         
         public Country Country { get; set; }
     }
